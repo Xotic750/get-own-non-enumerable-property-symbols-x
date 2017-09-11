@@ -4,7 +4,7 @@
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
- * @module get-own-non-enumerable-symbols-x
+ * @module get-own-non-enumerable-property-symbols-x
  */
 
 'use strict';
@@ -21,7 +21,7 @@ var propertyIsEnumerable = require('property-is-enumerable-x');
  * @throws {typeError} - If target is null or undefined.
  * @returns {Array} The non-enumerable own property symbols.
  * @example
- * var getOwnNonEnumerablePropertySymbols = require('get-own-non-enumerable-symbols-x');
+ * var getOwnNonEnumerablePropertySymbols = require('get-own-non-enumerable-property-symbols-x');
  *
  * var obj = { bar: 1, foo: 2 };
  *
