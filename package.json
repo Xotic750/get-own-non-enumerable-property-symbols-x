@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "array-filter-x": "^3.0.1",
-    "get-own-property-symbols-x": "^1.1.0",
+    "get-own-property-symbols-x": "^2.0.0",
     "property-is-enumerable-x": "^2.0.1",
     "to-object-x": "^2.0.1"
   },
