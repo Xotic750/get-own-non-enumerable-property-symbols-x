@@ -51,24 +51,27 @@ const ifEnumerableSymbols = definedEnumerable ? it : xit;
 
 describe('getOEPS', function() {
   it('is a function', function() {
+    expect.assertions(1);
     expect(typeof getOEPS).toBe('function');
   });
 
   it('should throw when target is null or undefined', function() {
+    expect.assertions(1);
     expect(function() {
       getOEPS();
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       getOEPS(void 0);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       getOEPS(null);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
   });
 
   it('should work with other primitives', function() {
+    expect.assertions(1);
     const values = [1, true, 'ac'];
 
     const expected = values.map(function() {
@@ -83,6 +86,7 @@ describe('getOEPS', function() {
   });
 
   it('should return empty array', function() {
+    expect.assertions(1);
     expect(getOEPS({bar: 1, foo: 2})).toStrictEqual([]);
   });
 

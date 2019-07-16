@@ -7,10 +7,11 @@
  * @module get-own-non-enumerable-property-symbols-x
  */
 
-const toObject = require('to-object-x');
-const filter = require('array-filter-x');
-const getOPS = require('get-own-property-symbols-x');
-const propertyIsEnumerable = require('property-is-enumerable-x');
+import toObject from 'to-object-x';
+
+import filter from 'array-filter-x';
+import getOPS from 'get-own-property-symbols-x';
+import propertyIsEnumerable from 'property-is-enumerable-x';
 
 /**
  * This method returns only the non-enumerable own property symbols of an object.
@@ -38,10 +39,10 @@ const propertyIsEnumerable = require('property-is-enumerable-x');
  * getOwnNonEnumerablePropertySymbols(obj); // [symbol1]
  */
 // eslint-disable-next-line id-length
-module.exports = function getOwnNonEnumerablePropertySymbols(target) {
+export default function getOwnNonEnumerablePropertySymbols(target) {
   const object = toObject(target);
 
   return filter(getOPS(object), function(symbol) {
     return propertyIsEnumerable(object, symbol) === false;
   });
-};
+}
