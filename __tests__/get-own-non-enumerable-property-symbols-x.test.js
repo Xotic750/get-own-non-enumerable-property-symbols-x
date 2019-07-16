@@ -1,4 +1,4 @@
-let getOEPS;
+import getOEPS from '../src/get-own-non-enumerable-property-symbols-x';
 
 const hasSymbolSupport = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 
@@ -12,7 +12,6 @@ if (hasSymbolSupport) {
   });
 
   const nonEnum = Object.getOwnPropertySymbols(testObj);
-  // eslint-disable-next-line no-prototype-builtins
   definedNonEnumerable = nonEnum.length === 1 && Object.propertyIsEnumerable(testObj, nonEnum) === false;
 
   testObj = Object.defineProperty({}, Symbol('second'), {
@@ -33,7 +32,7 @@ describe('getOEPS', function() {
   });
 
   it('should throw when target is null or undefined', function() {
-    expect.assertions(1);
+    expect.assertions(3);
     expect(function() {
       getOEPS();
     }).toThrowErrorMatchingSnapshot();
