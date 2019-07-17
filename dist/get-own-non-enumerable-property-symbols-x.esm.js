@@ -12,7 +12,7 @@ import propertyIsEnumerable from 'property-is-enumerable-x';
  * @returns {Array} The non-enumerable own property symbols.
  */
 
-export default function getOwnNonEnumerablePropertySymbols(target) {
+var getOwnNonEnumerablePropertySymbols = function getOwnNonEnumerablePropertySymbols(target) {
   var _this = this;
 
   var object = toObject(target);
@@ -21,6 +21,8 @@ export default function getOwnNonEnumerablePropertySymbols(target) {
 
     return propertyIsEnumerable(object, symbol) === false;
   }.bind(this));
-}
+};
+
+export default getOwnNonEnumerablePropertySymbols;
 
 //# sourceMappingURL=get-own-non-enumerable-property-symbols-x.esm.js.map
