@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-25T22:37:19.088Z",
+  "date": "2019-07-26T14:49:02.108Z",
   "describe": "",
   "description": "Like Object.getOwnPropertySymbols but gets only non-enumerable properties.",
   "file": "get-own-non-enumerable-property-symbols-x.js",
   "hash": "1bc2eb7a18ee7786de81",
   "license": "MIT",
-  "version": "2.0.9"
+  "version": "2.0.10"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
