@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-31T17:57:21.930Z",
+  "date": "2019-07-31T20:15:22.085Z",
   "describe": "",
   "description": "Like Object.getOwnPropertySymbols but gets only non-enumerable properties.",
   "file": "get-own-non-enumerable-property-symbols-x.js",
